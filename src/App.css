@@ -34,3 +34,17 @@
   flex-direction: column;
   gap:20px;
 }
+.box{
+  height:100px;
+  /* width:100px; */
+  border:1px solid black;
+  font-size: 70px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  color:black;
+ }
+ .board{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+ }

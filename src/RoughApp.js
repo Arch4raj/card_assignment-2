@@ -315,6 +315,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
+import { toBeEmpty } from '@testing-library/jest-dom/dist/matchers';
 function App(){
     
 const initialmovielist=[
@@ -393,12 +394,14 @@ const navigate= useNavigate()
          
           <Button color="inherit" onClick={()=>navigate('/movies')}>movies</Button>
           <Button color="inherit" onClick={()=>navigate('/movies/add')}>AddMovies</Button>
+          {/* <Button color="inherit" onClick={()=>navigate('/tictac')}>tic_tac_toe</Button> */}
         </Toolbar>
       </AppBar>
             {/* <Link to="/movies">movie</Link> */}
        <Routes>
       <Route path="/movies" element={<Movielist movielist={movielist} setmovielist={setmovielist}/>}/>
       <Route path="/movies/:id" element={<Moviedetails movielist={movielist} />}/>
+      {/* <Route path="/tictac" element={<Tictactoe/>}/> */}
       <Route path="/movies/add" element={<Addmovie  movielist={movielist} setmovielist={setmovielist} />}/>
        </Routes>
         </div>
@@ -552,3 +555,41 @@ function Movielist({movielist,setmovielist}){
         );
             
         }
+
+        // tic-tac-toe---------->
+
+
+        // function Tictactoe(){
+
+        //     return(
+        //         <div >
+        //     <h3>fun game</h3>
+        //     <Board/>
+            
+            
+        //         </div>
+        //     )
+        // }
+        // function Board(){
+        //     const [board,setBoard]=useState([null,null,null,null,
+        //         null,null,null,null,null,null,null,null])
+        //    const [isxturn,setIsxturn] =useState(true)
+        //         return(
+                
+        //         <div className='board'>
+        //             {board.map((val,index)=><Gamebox val={index} onPlayerClick={()=>handleClick(index)} />)}
+            
+        //         </div>
+        //     )
+        // }
+        // function Gamebox({val,onPlayerClick}){
+        //     // const [val,setVal]=useState()
+        //     const style={
+        //         color : val == 'x' ?'green':'red'
+        //     }
+        //     return(
+        //         <div style={style} className='box' onClick={onPlayerClick}>
+        //          {val}
+        //         </div>
+        //     )
+        // }

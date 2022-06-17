@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import Rough from './RoughApp';
 import { BrowserRouter } from 'react-router-dom';
-import Controlledforms from './Controlled forms';
-import Form from './Crud';
+
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
