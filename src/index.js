@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Rough from './RoughApp';
+import Rough from './App';
 import { BrowserRouter } from 'react-router-dom';
 
 
